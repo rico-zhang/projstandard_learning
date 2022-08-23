@@ -1,0 +1,28 @@
+# 🎨 http://editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+# tab_width = 2 #通常不需要指定
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+
+# 有些规则，editorconfig 和 .prettierrc 同时可以定义。
+# 因此，我们要避免冗余、重复的定义。
+# 这些规则如下：
+# end_of_line
+# indent_style
+# indent_size/tab_width
+# max_line_length
+# 我们将这些规则的定义，均放在 .editorconfig 中。
+# 如果prettierrc中的options.editorconfig是true并且您的项目中有一个.editorconfig文件，Prettier 将解析它并将其属性转换为相应的 Prettier 配置。但是如果prettierrc中也进行了配置，那么prettier的优先级高
+# https://prettier.io/docs/en/configuration.html
+
+#vscode需要安装EditorConfig for VS Code插件; HBuilderX需要在设置中将editorConfig启用
